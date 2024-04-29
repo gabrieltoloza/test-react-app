@@ -1,0 +1,220 @@
+:root {
+    --primary: 237, 94%, 84%;
+    --background: 266, 16%, 92%;
+    --background-secondary: 256, 12%, 12%;
+    --background-secondary-dark: 256, 10%, 10%;
+    --background-secondary-light: 257, 11%, 16%;
+    --text-primary: 0, 0%, 0%;
+    --black: 0, 0%, 0%;
+    --white: 0, 0%, 100%;
+    --quite-grey: 0, 0%, 50%;
+    --grooble: 10, 28%, 93%;
+    --heading-large: 5.6rem;
+    --heading-medium: 3.6rem;
+    --heading-small: 2.4rem;
+    --paragraph: 1.11rem;
+    --navbar-buttons: 2.4rem;
+    --transition-main: .175, .685, .32;
+    --font-main: "Poppins";
+}
+
+
+
+a {
+    color: hsla(var(--primary));
+    font-size: var(--paragraph);
+    text-decoration: underline;
+}
+
+a:visited {
+    color: hsla(var(--primary));
+}
+
+ul, ol {
+    margin: 1em 0;
+}
+
+.flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexbox-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.flexbox-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.flexbox-col {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flexbox-col-left {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;   
+}
+
+.flexbox-col-left-ns {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.flexbox-col-right {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.flexbox-col-start-center {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flexbox-space-bet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.view-width {
+    width: 70%;
+    
+}
+
+
+#navbar {
+    top: 0;
+    padding: 0;
+    width: 5rem;
+    height: 100vh;
+    position: fixed;
+    background-color: hsla(var(--background-secondary));
+    transition: width .35s cubic-bezier(var(--transition-main), 1);
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-top-right-radius: 10px; 
+    border-bottom-right-radius: 10px; 
+}
+
+#navbar:hover {
+    width: 13.25em;
+    
+}
+
+#navbar::-webkit-scrollbar-track {
+    background-color: hsl(var(--background-secondary));
+}
+#navbar::-webkit-scrollbar {
+    width: 8px;
+    background-color: hsl(var(--background-secondary));
+}
+#navbar::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--primary));
+}
+
+.navbar-items {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.navbar-logo {
+    margin: 0 0 2em 0;
+    width: 100%;
+    height: 5em;
+    background: hsl(var(--background-secondary-dark));
+}
+
+.navbar-logo > .navbar-item-inner {
+    width: calc(5rem - 8px);
+}
+
+.navbar-logo > .navbar-item-inner:hover {
+    background-color: transparent;
+}
+
+.navbar-logo > .navbar-item-inner > svg {
+    height: 2em;
+    fill: hsl(var(--white));
+}
+
+.navbar-item {
+    padding: 0 .5em;
+    width: 100%;
+    cursor: pointer;
+}
+
+.navbar-item-inner {
+    padding: 1em 0;
+    width: 100%;
+    position: relative;
+    color: hsl(var(--quite-grey));
+    border-radius: .25em;
+    text-decoration: none;
+    transition: all .2s cubic-bezier(var(--transition-main), 1);
+}
+
+.navbar-item-inner:hover {
+    color: hsl(var(--white));
+    background: hsl(var(--background-secondary-light));
+    box-shadow: 0 17px 30px -10px hsla(var(--black), .25);
+}
+
+.navbar-item-inner-icon-wrapper {
+    width: calc(5rem - 1em - 8px);
+    position: relative;
+}
+
+.navbar-item-inner-icon-wrapper ion-icon {
+    position: absolute;
+    font-size: calc(var(--navbar-buttons) - 1rem );
+}
+
+.link-text {
+    margin: 0;
+    width: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: all .35s cubic-bezier(var(--transition-main), 1);
+    overflow: hidden;
+    opacity: 0;
+}
+
+#navbar:hover .link-text {
+    width: calc(100% - calc(5rem - 5px));
+    opacity: 1;
+}
+
+#cantidad-carrito {
+    margin-left: 10px;
+}
+
+#cantidad-carrito:hover {
+    margin-left: 20px;
+}
+
+
+.span-cantidad {
+    margin-inline-start: 10px;
+}
+
+.span-cantidad:hover {
+    margin-inline-start: 10px;
+}
